@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <title>Course Registration Form</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        width: 50%;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid white;
+        background-color: #f0f0f0;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      label {
+        display: block;
+        margin: 10px 0;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid white;
+      }
+
+      button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background-color: #4c3ffd;
+        color: white;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #2f18fb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Course Registration Form</h1>
+      <form id="course-form" method="POST" action="submit.php">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="course">Course</label>
+        <select id="course" name="course" required>
+          <option value="">Select a course</option>
+          <option value="web-design">Web Design</option>
+          <option value="web-development">Web Development</option>
+          <option value="graphic-design">App Dovelopment</option>
+          <option value="digital-marketing">Web Testing</option>
+        </select>
+
+        <button type="submit" id="submit">Register</button>
+      </form>
+      <p id="message"></p>
+    </div>
+  </body>
+</html>
